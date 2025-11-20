@@ -22,4 +22,6 @@ Ekstenzija je spremna i nalazi se pored polja za pretragu (moguće je pronaći j
 
 <img src="./assets/screenshot.png" alt="Screenshot upotrebe ekstenzije">
 
+<html>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vn86I_mD5IA?si=Q_zwfMAuggS9Qo2W" title="FTN Canvas Plus Plus demonstracija" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</html>
