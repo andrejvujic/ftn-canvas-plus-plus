@@ -22,6 +22,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
+let container;
+document.addEventListener("DOMContentLoaded", (e) => {
+  // Makes the container invisible at first so that
+  // the hiding of the cards isn't noticeable.
+  container = document.getElementById("DashboardCard_Container");
+  if (container) container.style = "display: block; opacity: 0;";
+});
+
 window.onload = () => {
   setTimeout(() => {
     // Loads the preferences from local storage and hides
@@ -48,5 +56,12 @@ window.onload = () => {
         });
       }
     });
+
+    // Once the required cards are hidden the container's
+    // opacity will be animated and it will be made visible.
+    if (container) {
+      container.style = "display: block;";
+      container.classList.add("fade-in");
+    }
   }, 1200);
 };
