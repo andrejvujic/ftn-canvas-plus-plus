@@ -1,0 +1,24 @@
+{
+  "name": "FTNCanvas++",
+  "description": "Ekstenzija koja omogućava sakrivanje kartica kurseva na FTN Canvas-u. Neka Canvas ne bude zatrpan!",
+  "version": "1.0",
+  "manifest_version": 3,
+   "icons": {
+    "128": "./assets/ftn-128.png"
+  },
+  "action": {
+    "default_popup": "./src/index.html",
+    "default_icon": "./assets/ftn-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://canvas.ftn.uns.ac.rs/"],
+      "js": ["./src/js/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "./src/js/background.js"
+  },
+  "permissions": ["tabs", "storage"]
+}
